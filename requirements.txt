@@ -1,18 +1,42 @@
-# Paquetes principales de LangChain
-langchain>=0.2.0
-langchain-community>=0.2.0
-langchain-openai>=0.1.3
+# --------------------------------------------------
+# Procesamiento de documentos 
+# --------------------------------------------------
+pdfplumber>=0.10.0  # Para extracción avanzada de PDFs
+python-docx>=0.8.11  # Procesamiento de Word
+openpyxl>=3.1.2  # Para archivos Excel
+pypdf>=3.17.0  # Alternativa para PDFs
+unstructured>=0.12.0  # Procesamiento genérico de documentos
+tiktoken>=0.6.0  # Tokenización eficiente
 
-# Procesamiento de documentos
-pypdf>=3.17.0
-pdfplumber>=0.10.0
-python-docx>=0.8.11
-openpyxl>=3.1.2
+# --------------------------------------------------
+# Machine Learning & Embeddings 
+# --------------------------------------------------
+torch>=2.0.1  # PyTorch base
+transformers>=4.30.0  # Modelos de HuggingFace
+sentence-transformers>=2.2.2  # Embeddings especializados
+accelerate>=0.27.0  # Optimización de entrenamiento
+bitsandbytes>=0.43.0  # Para entrenar con menos RAM
+peft>=0.8.0  # Fine-tuning eficiente
 
-# Bases de datos vectoriales
-faiss-cpu>=1.7.4
-numpy>=2.1.0
+# --------------------------------------------------
+# Vector Databases & RAG
+# --------------------------------------------------
+faiss-cpu>=1.7.4  # Búsqueda semántica local
+# faiss-gpu>=1.7.4  # Si tienes GPU NVIDIA
+langchain>=0.1.0  # Framework principal
+langchain-community>=0.0.29  # Conectores adicionales
 
-# Interfaz web y utilidades
-streamlit>=1.32.0
-tiktoken>=0.6.0
+# --------------------------------------------------
+# Interfaz y Utilidades 
+# --------------------------------------------------
+streamlit>=1.32.0  # Interfaz web
+pandas>=2.0.0  # Manejo de datos
+numpy>=1.24.0  # Operaciones numéricas
+tqdm>=4.66.0  # Barras de progreso
+
+# --------------------------------------------------
+# Entrenamiento y Datos 
+# --------------------------------------------------
+datasets>=2.14.0  # Para cargar datasets de entrenamiento
+scikit-learn>=1.3.0  # Preprocesamiento de datos
+wandb>=0.16.0  # Monitoreo de entrenamiento (opcional)
