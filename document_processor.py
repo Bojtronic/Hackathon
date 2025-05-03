@@ -1,7 +1,8 @@
 import os
 import pdfplumber
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import OpenAIEmbeddings
+#from langchain.embeddings import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.document_loaders import PyPDFLoader, Docx2txtLoader, UnstructuredExcelLoader
 
@@ -11,7 +12,7 @@ class DocumentProcessor:
             chunk_size=1000,
             chunk_overlap=200
         )
-        self.embeddings = OpenAIEmbeddings(openai_api_key="your-api-key")
+        self.embeddings = OpenAIEmbeddings(openai_api_key="api-key")
 
     def load_document(self, file_path):
         if file_path.endswith(".pdf"):
@@ -30,5 +31,4 @@ class DocumentProcessor:
         db = FAISS.from_documents(docs, self.embeddings)
         db.save_local(save_path)
         return db
-    
     

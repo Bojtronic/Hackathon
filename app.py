@@ -8,7 +8,8 @@ from io import BytesIO
 
 st.set_page_config(page_title="AI Copilot for Renewable Energy Data Rooms", layout="wide")
 
-OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY")
+#OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY")
+OPENAI_API_KEY = "api-key"
 
 st.title("AI Copilot for Renewable Energy Data Rooms")
 
@@ -148,3 +149,7 @@ with st.expander("Checklist Automation", expanded=False):
                 except Exception as e:
                     st.error(f"Checklist processing failed: {str(e)}")
                     st.exception(e)
+
+
+
+

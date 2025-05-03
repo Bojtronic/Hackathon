@@ -1,10 +1,11 @@
-from langchain.chat_models import ChatOpenAI
+#from langchain.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQA
 from langchain.vectorstores import FAISS
-from langchain.embeddings import OpenAIEmbeddings
+#from langchain.embeddings import OpenAIEmbeddings
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
 class RAGSystem:
-    def __init__(self, db_path="faiss_index", openai_api_key="your-api-key"):
+    def __init__(self, db_path="faiss_index", openai_api_key="api-key"):
         self.llm = ChatOpenAI(
             model="gpt-4-turbo",
             temperature=0,
